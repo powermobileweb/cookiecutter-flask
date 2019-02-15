@@ -1,0 +1,13 @@
+# Config file for automatic testing at travis-ci.org
+language: python
+python:
+  - 2.7
+  - 3.5
+  - 3.6
+install:
+  - pip install cookiecutter
+  - pip install invoke==1.0.0
+  - nvm install 8.11.2
+  - nvm use 8.11.2
+script:
+  - invoke test
